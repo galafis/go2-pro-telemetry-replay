@@ -1,0 +1,78 @@
+{
+  "scenarioId": "closed-course",
+  "source": "synthetic",
+  "records": [
+    {
+      "atMs": 0,
+      "xM": 0.0,
+      "yM": 0.0,
+      "batteryPct": 80.0,
+      "quality": "valid",
+      "gapMs": 0,
+      "distanceM": 0,
+      "speedMps": null,
+      "segmentIncluded": false
+    },
+    {
+      "atMs": 1000,
+      "xM": 0.5,
+      "yM": 0.0,
+      "batteryPct": 79.9,
+      "quality": "valid",
+      "gapMs": 1000,
+      "distanceM": 0.5,
+      "speedMps": 0.5,
+      "segmentIncluded": true
+    },
+    {
+      "atMs": 2000,
+      "xM": 1.0,
+      "yM": 0.0,
+      "batteryPct": 79.8,
+      "quality": "valid",
+      "gapMs": 1000,
+      "distanceM": 0.5,
+      "speedMps": 0.5,
+      "segmentIncluded": true
+    },
+    {
+      "atMs": 3000,
+      "xM": 1.0,
+      "yM": 0.5,
+      "batteryPct": 79.7,
+      "quality": "valid",
+      "gapMs": 1000,
+      "distanceM": 0.5,
+      "speedMps": 0.5,
+      "segmentIncluded": true
+    },
+    {
+      "atMs": 4000,
+      "xM": 1.0,
+      "yM": 1.0,
+      "batteryPct": 79.6,
+      "quality": "valid",
+      "gapMs": 1000,
+      "distanceM": 0.5,
+      "speedMps": 0.5,
+      "segmentIncluded": true
+    },
+    {
+      "atMs": 5000,
+      "xM": 0.5,
+      "yM": 1.0,
+      "batteryPct": 79.5,
+      "quality": "valid",
+      "gapMs": 1000,
+      "distanceM": 0.5,
+      "speedMps": 0.5,
+      "segmentIncluded": true
+    }
+  ],
+  "findings": [],
+  "observedDistanceM": 2.5,
+  "peakIncludedSpeedMps": 0.5,
+  "excludedIntervals": 0,
+  "durationMs": 5000,
+  "maxGapMs": 1500
+}

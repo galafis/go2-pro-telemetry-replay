@@ -1,0 +1,7 @@
+atMs,xM,yM,batteryPct,quality
+0,0,0,80.0,valid
+1000,0.5,0,79.9,valid
+2000,1,0,79.8,valid
+3000,1,0.5,79.7,valid
+4000,1,1,79.6,valid
+5000,0.5,1,79.5,valid

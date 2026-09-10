@@ -1,0 +1,12 @@
+[
+  {
+    "scenario_id": "closed-course",
+    "source": "synthetic",
+    "canonical_samples": 6,
+    "included_intervals": 5,
+    "excluded_intervals": 0,
+    "duration_ms": 5000,
+    "observed_distance_m": 2.5,
+    "included_interval_pct": 100.0
+  }
+]

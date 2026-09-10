@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://galafis.github.io/go2-pro-telemetry-replay/schemas/scenario.schema.json",
+  "title": "go2-pro-telemetry-replay scenario / cenário",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "scenarioId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+    },
+    "source": {
+      "enum": ["synthetic", "manual"]
+    },
+    "maxGapMs": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 60000
+    },
+    "speedLimitMps": {
+      "type": "number",
+      "minimum": 0.01,
+      "maximum": 20
+    },
+    "samples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "atMs": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 86400000
+          },
+          "xM": {
+            "type": "number",
+            "minimum": -1000000,
+            "maximum": 1000000
+          },
+          "yM": {
+            "type": "number",
+            "minimum": -1000000,
+            "maximum": 1000000
+          },
+          "batteryPct": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "quality": {
+            "enum": ["valid", "invalid"]
+          }
+        },
+        "required": ["atMs", "xM", "yM", "batteryPct", "quality"]
+      },
+      "minItems": 1,
+      "maxItems": 20000
+    }
+  },
+  "required": ["schemaVersion", "scenarioId", "source", "maxGapMs", "speedLimitMps", "samples"]
+}
