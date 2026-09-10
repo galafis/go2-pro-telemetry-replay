@@ -60,3 +60,18 @@ O navegador lê as importações localmente, limita-as a 1 MB, escapa textos inf
 | `scripts/analyze.mjs` | Command-line adapter · Adaptador de linha de comando                                    |
 | `tests/`              | Behavioral and contract checks · Verificações de comportamento e contrato               |
 | `examples/`           | Synthetic inputs and expected reports · Entradas sintéticas e relatórios esperados      |
+
+## Domain decision flow · Fluxo de decisões do domínio
+
+```mermaid
+flowchart TD
+  A["Timestamped observations / Observações temporais"] --> B["Sort and group timestamps / Ordenar e agrupar instantes"]
+  B --> C["Collapse identical duplicates / Consolidar duplicatas idênticas"]
+  B --> D["Invalidate conflicts / Invalidar conflitos"]
+  C --> E["Check gaps and speed / Verificar lacunas e velocidade"]
+  D --> E
+  E --> F["Accepted segment distance / Distância dos segmentos aceitos"]
+  E --> G["Excluded intervals / Intervalos excluídos"]
+  F --> H["Replay with staleness / Reprodução com validade temporal"]
+  G --> H
+```

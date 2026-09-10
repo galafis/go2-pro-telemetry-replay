@@ -7,6 +7,25 @@
 
 [English](#english) · [Português](#portugues) · [Live workbench · Demonstração](https://galafis.github.io/go2-pro-telemetry-replay/) · [Examples · Exemplos](#examples)
 
+<!-- domain-workflow:start -->
+
+## Domain workflow · Fluxo do domínio
+
+```mermaid
+flowchart TD
+  A["Timestamped observations / Observações temporais"] --> B["Sort and group timestamps / Ordenar e agrupar instantes"]
+  B --> C["Collapse identical duplicates / Consolidar duplicatas idênticas"]
+  B --> D["Invalidate conflicts / Invalidar conflitos"]
+  C --> E["Check gaps and speed / Verificar lacunas e velocidade"]
+  D --> E
+  E --> F["Accepted segment distance / Distância dos segmentos aceitos"]
+  E --> G["Excluded intervals / Intervalos excluídos"]
+  F --> H["Replay with staleness / Reprodução com validade temporal"]
+  G --> H
+```
+
+<!-- domain-workflow:end -->
+
 <a id="english"></a>
 
 ## English
@@ -178,3 +197,5 @@ Projeto público relacionado: [go2-pro-clearance-bench](https://github.com/galaf
 
 Independent work; institutional contact does not imply institutional or vendor endorsement.  
 Trabalho independente; o contato institucional não implica endosso de instituição ou fabricante.
+
+[Worked examples with expected metrics · Exemplos comentados com métricas esperadas](docs/EXPERIMENTS.md)
