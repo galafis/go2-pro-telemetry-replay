@@ -1,0 +1,18 @@
+{
+  "name": "go2-pro-telemetry-replay",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "EN: Offline telemetry replay prototype with a Unitree Go2 PRO roadmap. PT: Protótipo de reprodução de telemetria com plano de desenvolvimento para o Unitree Go2 PRO.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage",
+    "analyze": "node scripts/analyze.mjs",
+    "examples": "node scripts/check-examples.mjs"
+  }
+}

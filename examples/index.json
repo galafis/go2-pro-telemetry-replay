@@ -1,0 +1,29 @@
+[
+  {
+    "file": "nominal.json",
+    "label": {
+      "en": "Closed course",
+      "pt": "Percurso fechado"
+    },
+    "expectedStatus": "complete",
+    "report": "nominal.report.json"
+  },
+  {
+    "file": "missing-observations.json",
+    "label": {
+      "en": "Missing observations",
+      "pt": "Observações ausentes"
+    },
+    "expectedStatus": "review-notes",
+    "report": "missing-observations.report.json"
+  },
+  {
+    "file": "conflicting-timestamp.json",
+    "label": {
+      "en": "Conflicting timestamp",
+      "pt": "Instante conflitante"
+    },
+    "expectedStatus": "review-required",
+    "report": "conflicting-timestamp.report.json"
+  }
+]

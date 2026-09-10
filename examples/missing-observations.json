@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "missing-observations",
+  "source": "synthetic",
+  "maxGapMs": 1500,
+  "speedLimitMps": 2,
+  "samples": [
+    {
+      "atMs": 0,
+      "xM": 0,
+      "yM": 0,
+      "batteryPct": 80.0,
+      "quality": "valid"
+    },
+    {
+      "atMs": 1000,
+      "xM": 0.5,
+      "yM": 0,
+      "batteryPct": 79.9,
+      "quality": "valid"
+    },
+    {
+      "atMs": 2000,
+      "xM": 1,
+      "yM": 0,
+      "batteryPct": 79.8,
+      "quality": "invalid"
+    },
+    {
+      "atMs": 6000,
+      "xM": 1,
+      "yM": 0.5,
+      "batteryPct": 79.7,
+      "quality": "valid"
+    },
+    {
+      "atMs": 7000,
+      "xM": 1,
+      "yM": 1,
+      "batteryPct": 79.6,
+      "quality": "valid"
+    },
+    {
+      "atMs": 8000,
+      "xM": 0.5,
+      "yM": 1,
+      "batteryPct": 79.5,
+      "quality": "valid"
+    }
+  ]
+}

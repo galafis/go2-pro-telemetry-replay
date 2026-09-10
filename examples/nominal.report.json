@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "analysisVersion": "0.1.0",
+  "projectId": "go2-pro-telemetry-replay",
+  "scenarioId": "closed-course",
+  "source": "synthetic",
+  "status": "complete",
+  "metrics": [
+    {
+      "key": "samples",
+      "label": {
+        "en": "Unique timestamps",
+        "pt": "Instantes únicos"
+      },
+      "value": 6,
+      "unit": ""
+    },
+    {
+      "key": "distanceM",
+      "label": {
+        "en": "Included distance",
+        "pt": "Distância incluída"
+      },
+      "value": 2.5,
+      "unit": "m"
+    },
+    {
+      "key": "excludedIntervals",
+      "label": {
+        "en": "Excluded intervals",
+        "pt": "Intervalos excluídos"
+      },
+      "value": 0,
+      "unit": ""
+    },
+    {
+      "key": "peakSpeedMps",
+      "label": {
+        "en": "Peak included speed",
+        "pt": "Maior velocidade incluída"
+      },
+      "value": 0.5,
+      "unit": "m/s"
+    }
+  ],
+  "findings": [],
+  "records": [
+    {
+      "atMs": 0,
+      "xM": 0,
+      "yM": 0,
+      "batteryPct": 80,
+      "quality": "valid",
+      "gapMs": 0,
+      "distanceM": 0,
+      "speedMps": null,
+      "segmentIncluded": false
+    },
+    {
+      "atMs": 1000,
+      "xM": 0.5,
+      "yM": 0,
+      "batteryPct": 79.9,
+      "quality": "valid",
+      "gapMs": 1000,
+      "distanceM": 0.5,
+      "speedMps": 0.5,
+      "segmentIncluded": true
+    },
+    {
+      "atMs": 2000,
+      "xM": 1,
+      "yM": 0,
+      "batteryPct": 79.8,
+      "quality": "valid",
+      "gapMs": 1000,
+      "distanceM": 0.5,
+      "speedMps": 0.5,
+      "segmentIncluded": true
+    },
+    {
+      "atMs": 3000,
+      "xM": 1,
+      "yM": 0.5,
+      "batteryPct": 79.7,
+      "quality": "valid",
+      "gapMs": 1000,
+      "distanceM": 0.5,
+      "speedMps": 0.5,
+      "segmentIncluded": true
+    },
+    {
+      "atMs": 4000,
+      "xM": 1,
+      "yM": 1,
+      "batteryPct": 79.6,
+      "quality": "valid",
+      "gapMs": 1000,
+      "distanceM": 0.5,
+      "speedMps": 0.5,
+      "segmentIncluded": true
+    },
+    {
+      "atMs": 5000,
+      "xM": 0.5,
+      "yM": 1,
+      "batteryPct": 79.5,
+      "quality": "valid",
+      "gapMs": 1000,
+      "distanceM": 0.5,
+      "speedMps": 0.5,
+      "segmentIncluded": true
+    }
+  ],
+  "durationMs": 5000,
+  "observedDistanceM": 2.5,
+  "maxGapMs": 1500
+}

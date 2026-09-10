@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "analysisVersion": "0.1.0",
+  "projectId": "go2-pro-telemetry-replay",
+  "scenarioId": "missing-observations",
+  "source": "synthetic",
+  "status": "review-notes",
+  "metrics": [
+    {
+      "key": "samples",
+      "label": {
+        "en": "Unique timestamps",
+        "pt": "Instantes únicos"
+      },
+      "value": 6,
+      "unit": ""
+    },
+    {
+      "key": "distanceM",
+      "label": {
+        "en": "Included distance",
+        "pt": "Distância incluída"
+      },
+      "value": 1.5,
+      "unit": "m"
+    },
+    {
+      "key": "excludedIntervals",
+      "label": {
+        "en": "Excluded intervals",
+        "pt": "Intervalos excluídos"
+      },
+      "value": 2,
+      "unit": ""
+    },
+    {
+      "key": "peakSpeedMps",
+      "label": {
+        "en": "Peak included speed",
+        "pt": "Maior velocidade incluída"
+      },
+      "value": 0.5,
+      "unit": "m/s"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "INVALID_SAMPLE",
+      "message": {
+        "en": "An invalid sample cannot anchor an observed segment.",
+        "pt": "Uma amostra inválida não pode definir um segmento observado."
+      },
+      "atMs": 2000
+    },
+    {
+      "severity": "warning",
+      "code": "SAMPLE_GAP",
+      "message": {
+        "en": "A 4000 ms gap is excluded from distance totals.",
+        "pt": "Um intervalo de 4000 ms foi excluído dos totais de distância."
+      },
+      "atMs": 6000
+    }
+  ],
+  "records": [
+    {
+      "atMs": 0,
+      "xM": 0,
+      "yM": 0,
+      "batteryPct": 80,
+      "quality": "valid",
+      "gapMs": 0,
+      "distanceM": 0,
+      "speedMps": null,
+      "segmentIncluded": false
+    },
+    {
+      "atMs": 1000,
+      "xM": 0.5,
+      "yM": 0,
+      "batteryPct": 79.9,
+      "quality": "valid",
+      "gapMs": 1000,
+      "distanceM": 0.5,
+      "speedMps": 0.5,
+      "segmentIncluded": true
+    },
+    {
+      "atMs": 2000,
+      "xM": 1,
+      "yM": 0,
+      "batteryPct": 79.8,
+      "quality": "invalid",
+      "gapMs": 1000,
+      "distanceM": 0,
+      "speedMps": null,
+      "segmentIncluded": false
+    },
+    {
+      "atMs": 6000,
+      "xM": 1,
+      "yM": 0.5,
+      "batteryPct": 79.7,
+      "quality": "valid",
+      "gapMs": 4000,
+      "distanceM": 0,
+      "speedMps": null,
+      "segmentIncluded": false
+    },
+    {
+      "atMs": 7000,
+      "xM": 1,
+      "yM": 1,
+      "batteryPct": 79.6,
+      "quality": "valid",
+      "gapMs": 1000,
+      "distanceM": 0.5,
+      "speedMps": 0.5,
+      "segmentIncluded": true
+    },
+    {
+      "atMs": 8000,
+      "xM": 0.5,
+      "yM": 1,
+      "batteryPct": 79.5,
+      "quality": "valid",
+      "gapMs": 1000,
+      "distanceM": 0.5,
+      "speedMps": 0.5,
+      "segmentIncluded": true
+    }
+  ],
+  "durationMs": 8000,
+  "observedDistanceM": 1.5,
+  "maxGapMs": 1500
+}
