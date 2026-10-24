@@ -1,30 +1,31 @@
 # Go2 PRO Telemetry Replay
 
-**Inspect recorded trajectories and expose gaps in the evidence.**  
-**Inspecione trajetórias registradas e identifique lacunas nos dados.**
+**Observation analysis · Análise de observações**
 
-[![Checks](https://github.com/galafis/go2-pro-telemetry-replay/actions/workflows/ci.yml/badge.svg)](https://github.com/galafis/go2-pro-telemetry-replay/actions/workflows/ci.yml) · **v0.1.0** · **28 browser tests / testes do navegador** · **MIT**
+<p align="center"><img src="assets/project-overview.svg" width="960" alt="Workflow illustration: Timed observations → Interval validation → Trajectory report"></p>
 
-[English](#english) · [Português](#portugues) · [Live workbench · Demonstração](https://galafis.github.io/go2-pro-telemetry-replay/) · [Examples · Exemplos](#examples)
+[![Checks](https://github.com/galafis/go2-pro-telemetry-replay/actions/workflows/ci.yml/badge.svg)](https://github.com/galafis/go2-pro-telemetry-replay/actions/workflows/ci.yml)
+[English](#english) · [Português](#portugues) · [Guided tour / Visita guiada](docs/SHOWCASE.md) · [Validation / Validação](docs/VALIDATION.md)
 
-<!-- domain-workflow:start -->
+> **EN:** Which trajectory intervals have enough evidence to include?<br>
+> **PT:** Quais intervalos de trajetória têm evidência suficiente para inclusão?
 
-## Domain workflow · Fluxo do domínio
+## Start here · Comece aqui
 
-```mermaid
-flowchart TD
-  A["Timestamped observations / Observações temporais"] --> B["Sort and group timestamps / Ordenar e agrupar instantes"]
-  B --> C["Collapse identical duplicates / Consolidar duplicatas idênticas"]
-  B --> D["Invalidate conflicts / Invalidar conflitos"]
-  C --> E["Check gaps and speed / Verificar lacunas e velocidade"]
-  D --> E
-  E --> F["Accepted segment distance / Distância dos segmentos aceitos"]
-  E --> G["Excluded intervals / Intervalos excluídos"]
-  F --> H["Replay with staleness / Reprodução com validade temporal"]
-  G --> H
-```
+| Goal · Objetivo | Where to go · Por onde começar |
+| --- | --- |
+| Understand a real example · Entender um exemplo concreto | [Walkthrough / Roteiro](docs/EXPERIMENTS.md) |
+| Reproduce and compare · Reproduzir e comparar | [Evidence tour / Visita às evidências](docs/SHOWCASE.md) |
+| Inspect the checks · Inspecionar as verificações | [Validation record / Registro de validação](docs/VALIDATION.md) · [CI](https://github.com/galafis/go2-pro-telemetry-replay/actions/workflows/ci.yml) |
+| Explore in the browser · Explorar no navegador | [Public demonstration / Demonstração pública](https://galafis.github.io/go2-pro-telemetry-replay/) |
 
-<!-- domain-workflow:end -->
+**Example result · Resultado do exemplo:** Unique timestamps / Instantes Ãºnicos: **6 **; Included distance / DistÃ¢ncia incluÃ­da: **1.5 m**; Excluded intervals / Intervalos excluÃ­dos: **2 **
+
+**Try a comparison · Experimente uma comparação**<br>
+**EN:** Compare nominal, missing observations and conflicting timestamps; inspect exclusions before summing distance.<br>
+**PT:** Compare o nominal, observações ausentes e instantes conflitantes; inspecione exclusões antes de somar distâncias.
+
+[![Existing application preview / Prévia existente da aplicação](assets/preview-en.svg)](https://galafis.github.io/go2-pro-telemetry-replay/)
 
 <a id="english"></a>
 
@@ -192,10 +193,10 @@ Projeto público relacionado: [go2-pro-clearance-bench](https://github.com/galaf
 
 ## Maintainer · Responsável
 
-**Gabriel Demetrios Lafis** · Brazil / Brasil  
+**Gabriel Demetrios Lafis** · Brazil / Brasil<br>
 **[gabrieldemetrioslafis@usp.br](mailto:gabrieldemetrioslafis@usp.br)** · [GitHub](https://github.com/galafis)
 
-Independent work; institutional contact does not imply institutional or vendor endorsement.  
+Independent work; institutional contact does not imply institutional or vendor endorsement.<br>
 Trabalho independente; o contato institucional não implica endosso de instituição ou fabricante.
 
 [Worked examples with expected metrics · Exemplos comentados com métricas esperadas](docs/EXPERIMENTS.md)
